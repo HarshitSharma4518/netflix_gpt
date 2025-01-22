@@ -5,12 +5,12 @@ import {auth} from "../utils/firebase";
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { checkValidData } from '../utils/validate';
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { getAuth, updateProfile } from "firebase/auth";
 const Login = () => {
     const [isSignInForm,setIsSignInForm]= useState(true);
     const[errorMessage,setErrorMessage] = useState(null);
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const name = useRef(null);
     const email = useRef(null);
     const password = useRef(null);
@@ -35,13 +35,13 @@ const Login = () => {
     // Signed up 
     const user = userCredential.user;
     console.log(user);
-    navigate("/browse");
+    // navigate("/browse");
     updateProfile(auth.currentUser, {
       displayName: name.current.value, photoURL: "https://example.com/jane-q-user/profile.jpg"
     }).then(() => {
       // Profile updated!
       // ...
-      navigate("/browse");
+      // navigate("/browse");
     }).catch((error) => {
       // An error occurred
       // ...
@@ -66,7 +66,7 @@ const Login = () => {
     // Signed in 
     const user = userCredential.user;
     console.log(user);
-    navigate("/browse");
+    // navigate("/browse");
     // ...
   })
   .catch((error) => {
