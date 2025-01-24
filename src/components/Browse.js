@@ -3,26 +3,23 @@ import Header from './header'
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
+import GptSearch from './GptSearch';
+import { useSelector } from 'react-redux';
 const Browse = () => {
+  const showGptSearch  = useSelector((store)=>store.gpt.showGptSearch);
   // Fetch Data from TMDB API and update stored movies
   useNowPlayingMovies();
   return (
     <div>
       <Header/>
-      <MainContainer/>
-      <SecondaryContainer/>
-     {
-      /*
-      MainContainer
-      -VideoBackground
-      - VideoTitle
-      SecondaryContainer
-      -MovieList
-      -cards
-      */
-     }
+      {
+        showGptSearch?(<GptSearch/>):( <> <MainContainer/>
+        <SecondaryContainer/> </>)
+      }
+     
+     
     </div>
-  )
-}
+  );
+};
 
-export default Browse
+export default Browse;
