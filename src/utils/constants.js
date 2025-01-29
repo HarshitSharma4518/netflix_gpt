@@ -20,4 +20,3 @@ export const API_OPTIONS={
  ];
 
 
-export const GEMINI_KEY = "AIzaSyAkoM5uW3kTWbhcya5T6bVcf3L7F3-uKN4";
