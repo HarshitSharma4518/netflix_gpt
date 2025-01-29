@@ -11,7 +11,7 @@ const Browse = () => {
   useNowPlayingMovies();
   return (
     <div>
-      <Header/>
+      <Header className="overflow-x-hidden overflow-y-auto"/>
       {
         showGptSearch?(<GptSearch/>):( <> <MainContainer/>
         <SecondaryContainer/> </>)

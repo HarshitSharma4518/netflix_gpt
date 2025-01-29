@@ -96,9 +96,9 @@ const Login = () => {
        {!isSignInForm && ( <input ref={name} type='text' placeholder='Full Name' className='p-4 my-4 w-full bg-gray-700'/>)}
         <input ref = {password} type='password' placeholder='password' className='p-4 my-4 w-full bg-gray-700'/>
         <p className='text-red-500 font-bold text-lg py-2'>{errorMessage}</p>
-        <button className='p-4 my-6 bg-red-700 w-full rounded-lg' onClick={handleButtonClick}>{isSignInForm ? "Sign In":"Sign Up"}</button>
+        <button className='p-4 my-6 bg-red-700 w-full rounded-lg ' onClick={handleButtonClick}>{isSignInForm ? "Sign In":"Sign Up"}</button>
  
-<p className='py-4 ' onClick={toggleSignInForm}> {isSignInForm? "New to Netflix? Sign Up Now" : "Already registered? Sign In Now"}</p>
+<p className='py-4 cursor-pointer  ' onClick={toggleSignInForm}> {isSignInForm? "New to Netflix? Sign Up Now" : "Already registered? Sign In Now"}</p>
 
       </form>
      

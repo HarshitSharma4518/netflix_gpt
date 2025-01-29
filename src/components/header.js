@@ -55,23 +55,14 @@ const handleLanguageChange = (e)=>{
       alt='logo'
       /> */
     // </div>
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between">
+    <div className=" flex p-2 absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row  md:justify-between ">
         <img
-        className="w-44"
+        className="w-44 mx-auto md:mx-0"
         src={LOGO}
         alt="logo"
         />
-        {user&&(<div className='flex p-2 '>
-          {showGptSearch  &&(
-          <select className='p-2 m-2 bg-gray-900 text-white' onChange={handleLanguageChange}>
-            {SUPPORTED_LANGUAGE.map((lang)=>(
-              <option key = {lang.identifier} value={lang.identifier}>
-                {lang.name} 
-                </option>
-            ))}
-            
-          </select>
-          )}
+        <div className='flex p-2'>
+      
           <button className='   text-white'
           onClick={handleGptSearchClick}>
             GPT Search
@@ -80,10 +71,9 @@ const handleLanguageChange = (e)=>{
 <button  onClick={handleSignOUt} className='font-bold text-white'>
   (Sign Out)
   </button>
+  </div>
+
         </div>
         )}
-    </div>
-  );
-};
-
+  
 export default Header;
