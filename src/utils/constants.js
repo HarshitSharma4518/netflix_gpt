@@ -18,6 +18,6 @@ export const API_OPTIONS={
   // {identifier:"spanish ", name:"Spanish"},
 
  ];
-export const OPENAI_KEY =" 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";
+// export const OPENAI_KEY =" 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";
 
 export const GEMINI_KEY = "AIzaSyAkoM5uW3kTWbhcya5T6bVcf3L7F3-uKN4";
